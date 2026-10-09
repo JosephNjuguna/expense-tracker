@@ -28,7 +28,6 @@ jobs:
           github_token: ${{ secrets.PROJECT_TOKEN }}
           organization: JosephNjuguna
           project_number: 3
-          project_number: 2
           content_id: ${{ github.event.pull_request.node_id }}
           field: Status
           value: In review
