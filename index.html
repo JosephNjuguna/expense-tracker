@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expenses Tracker</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -13,31 +15,33 @@
     <div class="main-section">
         <form action="" method="post" class="form" id="expense-form">
             <h3>Add Expense</h3>
-            <p>description</p>
-            <input type="text" placeholder="add expense">
-            <div class="group">
-                <div class="amount">
-                    <p>enter amount</p>
-                    <input type="number">
+            <div class="input-section">
+                <p>Description</p>
+                <input type="text" placeholder="add expense" id="addexpense">
+                <div class="group">
+                    <div class="amount">
+                        <p>Enter amount...</p>
+                        <input type="number" placeholder="enter amount" id="amount">
+                    </div>
+                    <div class="currency">
+                        <p>Select currency used</p>
+                        <select name="currency" id="currency">
+                            <option value="usd">usd</option>
+                            <option value="eur">eur</option>
+                            <option value="ksh">ksh</option>
+                            <option value="gbp">gbp</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="currency">
-                    <p>select payment currency</p>
-                    <select name="category" id="expense category">
-                        <option value="usd">usd</option>
-                        <option value="eur">eur</option>
-                        <option value="ksh">ksh</option>
-                        <option value="gbp">gbp</option>
-                    </select>
-                </div>
+                <p>Expense category</p>
+                <select name="category" id="category">
+                    <option value="transport">transport</option>
+                    <option value="food">food</option>
+                    <option value="shopping">shopping</option>
+                    <option value="entertainment">entertainment</option>
+                </select>
+                <input type="submit" value="Add Expense" id="submit">
             </div>
-            <p>category</p>
-            <select name="category" id="expense category">
-                <option value="transport">transport</option>
-                <option value="food">food</option>
-                <option value="shopping">shopping</option>
-                <option value="entertainment">entertainment</option>
-            </select>
-            <input type="submit" value="Add Expense">
         </form>
         <!-- expense list comes here -->
     </div>

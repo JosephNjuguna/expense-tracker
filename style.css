@@ -1,0 +1,98 @@
+body{
+    background-color: whitesmoke;  
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto; 
+}
+
+.main-section{
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+}
+
+
+
+.main-section .form{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 16px;
+    width: 40%;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.59);
+
+    /* padding: 2%; */
+}
+
+.main-section .form h3{
+    border-bottom: 5px solid navy;
+    padding: 2% 4%;
+    margin: 0;
+}
+
+.main-section .form .input-section{
+    padding: 1% 4%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+.main-section .form .input-section .group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-section .form .input-section .group div{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.main-section .form #addexpense{
+    /* margin: 1% 0; */
+    padding: 4%;
+    background-color: white;
+    color: navy;
+    font-weight: 900;
+    border: 1px solid navy;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.main-section .form #amount{
+    /* margin: 2% 0; */
+    padding: 6% 4%;
+    background-color: white;
+    color: navy;
+    font-weight: 900;
+    border: 1px solid navy;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.main-section .form #currency{
+    padding: 6% 2%;
+    border: 1px solid navy;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 16px;
+}
+
+.main-section .form #category{
+    padding: 4% 2%;
+    border: 1px solid navy;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 16px;
+}
+
+.main-section .form #submit{
+    margin: 2% 0;
+    padding: 4%;
+    background-color: navy;
+    color: white;
+    font-weight: 900;
+    border: none;
+    border-radius: 8px;
+}
+
