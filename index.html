@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Expenses Tracker</title>
 </head>
+
 <body>
-    
+    <!-- header goes here -->
+    <div class="main-section">
+        <form action="">
+            <h3>Add Expense</h3>
+            <p>description</p>
+            <input type="text" placeholder="add expense">
+            <div class="group">
+                <div class="amount">
+                    <p>enter amount</p>
+                    <input type="number">
+                </div>
+                <div class="currency">
+                    <p>select payment currency</p>
+                    <select name="category" id="expense category">
+                        <option value="usd">usd</option>
+                        <option value="eur">eur</option>
+                        <option value="ksh">ksh</option>
+                        <option value="gbp">gbp</option>
+                    </select>
+                </div>
+            </div>
+            <p>category</p>
+            <select name="category" id="expense category">
+                <option value="transport">transport</option>
+                <option value="food">food</option>
+                <option value="shopping">shopping</option>
+                <option value="entertainment">entertainment</option>
+            </select>
+        </form>
+        <!-- expense list comes here -->
+    </div>
 </body>
+
 </html>
