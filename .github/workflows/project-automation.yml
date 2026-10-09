@@ -15,8 +15,8 @@ jobs:
         uses: github/update-project-action@main
         with:
           github_token: ${{ secrets.PROJECT_TOKEN }}
-          organization: YOUR_USERNAME
-          project_number: 1
+          organization: JosephNjuguna
+          project_number: 2
           content_id: ${{ github.event.issue.node_id }}
           field: Status
           value: In progress
@@ -26,8 +26,8 @@ jobs:
         uses: github/update-project-action@main
         with:
           github_token: ${{ secrets.PROJECT_TOKEN }}
-          organization: YOUR_USERNAME
-          project_number: 1
+          organization: JosephNjuguna
+          project_number: 2
           content_id: ${{ github.event.pull_request.node_id }}
           field: Status
           value: In review
