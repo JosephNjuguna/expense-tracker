@@ -94,3 +94,37 @@ body{
     border-radius: 8px;
 }
 
+
+
+
+.expensedisplay{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 60%;
+    margin: 0 0 0 1%;    
+    border-radius: 8px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.59);
+}
+
+.expensedisplay .filter{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    justify-content: space-between;
+    /* background-color: red; */
+    padding: 1%;
+    border-bottom: 3px solid navy;
+}
+
+.expensedisplay .filter p {
+    border: 2px solid navy;
+    padding: 1% 4%;
+    color: navy;
+    border-radius: 20px;
+}
+.expensedisplay .filter p:hover{
+    background-color: navy;
+    color: white;
+}
+
