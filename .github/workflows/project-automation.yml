@@ -1,0 +1,33 @@
+name: Move project items
+
+on:
+  issues:
+    types: [assigned]
+  pull_request:
+    types: [opened, ready_for_review]
+
+jobs:
+  move-card:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Issue assigned -> In progress
+        if: github.event_name == 'issues'
+        uses: github/update-project-action@main
+        with:
+          github_token: ${{ secrets.PROJECT_TOKEN }}
+          organization: JosephNjuguna
+          project_number: 2
+          content_id: ${{ github.event.issue.node_id }}
+          field: Status
+          value: In progress
+
+      - name: PR opened -> In review
+        if: github.event_name == 'pull_request'
+        uses: github/update-project-action@main
+        with:
+          github_token: ${{ secrets.PROJECT_TOKEN }}
+          organization: JosephNjuguna
+          project_number: 2
+          content_id: ${{ github.event.pull_request.node_id }}
+          field: Status
+          value: In review
