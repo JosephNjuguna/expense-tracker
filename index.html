@@ -1,11 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Expenses Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=delete" />
 </head>
+
 <body>
-    
+    <!-- header goes here -->
+    <div>
+        <div class="header-appname">
+            <h2>Expense Tracker</h2>
+            <p>log spending in any currency. Total are converted to your home currency</p>
+        </div>
+        <div class="header-total">
+            <div class="total">
+                <p>Total Spent, 4 expenses.</p>
+                <h3>$135.42</h3>
+            </div>
+            <div class="currencychange">
+                <p>Home Currency</p>
+                <select name="currency" id="currency">
+                    <option value="usd">usd</option>
+                    <option value="eur">eur</option>
+                    <option value="ksh">ksh</option>
+                    <option value="gbp">gbp</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-section">
+        <form action="" method="post" class="form" id="expense-form">
+            <h3>Add Expense</h3>
+            <div class="input-section">
+                <p>Description</p>
+                <input type="text" placeholder="add expense" id="addexpense">
+                <div class="group">
+                    <div class="amount">
+                        <p>Enter amount...</p>
+                        <input type="number" placeholder="enter amount" id="amount">
+                    </div>
+                    <div class="currency">
+                        <p>Select currency used</p>
+                        <select name="currency" id="currency">
+                            <option value="usd">usd</option>
+                            <option value="eur">eur</option>
+                            <option value="ksh">ksh</option>
+                            <option value="gbp">gbp</option>
+                        </select>
+                    </div>
+                </div>
+                <p>Expense category</p>
+                <select name="category" id="category">
+                    <option value="transport">transport</option>
+                    <option value="food">food</option>
+                    <option value="shopping">shopping</option>
+                    <option value="entertainment">entertainment</option>
+                </select>
+                <input type="submit" value="Add Expense" id="submit">
+            </div>
+        </form>
+
+        <div class="expensedisplay">
+            <div class="filter">
+                <p id="all">All</p>
+                <p id="transport">Transport</p>
+                <p id="food">Food</p>
+                <p id="shopping">Shopping</p>
+                <p id="entertainment">entertainment</p>
+            </div>
+            <div class="header">
+                <h3>Expenses</h3>
+                <p>categories total: $135.42</p>
+            </div>
+
+            <div class="expenselist">
+                <div class="expense-card">
+                    <div class="item">
+                        <h3>lunch at the market</h3>
+                        <p>food</p>
+                    </div>
+                    <div class="money">
+                        <h3>$9.45</h3>
+                        <p>ksh 1,200.00</p>
+                    </div>
+                    <div class="delete">
+                        <span class="material-symbols-outlined">delete</span>
+                    </div>
+                </div>
+
+                <div class="expense-card">
+                    <div class="item">
+                        <h3>lunch at the market</h3>
+                        <p>food</p>
+                    </div>
+                    <div class="money">
+                        <h3>$9.45</h3>
+                        <p>ksh 1,200.00</p>
+                    </div>
+                    <div class="delete">
+                        <span class="material-symbols-outlined">delete</span>
+                    </div>
+                </div>
+
+                <div class="expense-card">
+                    <div class="item">
+                        <h3>lunch at the market</h3>
+                        <p>food</p>
+                    </div>
+                    <div class="money">
+                        <h3>$9.45</h3>
+                        <p>ksh 1,200.00</p>
+                    </div>
+                    <div class="delete">
+                        <span class="material-symbols-outlined">delete</span>
+                    </div>
+                </div>
+
+                <div class="no-expenses">
+                    <h4>There are no logged expenses</h4>
+                    <p>add expenses using form on the left</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>
