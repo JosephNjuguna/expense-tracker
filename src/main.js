@@ -2,15 +2,20 @@
 // It’s the one file i link in the HTML, 
 // and it’s where the form’s submit listener goes.
 
+import { addExpense, expenses } from "./state.js";
+import { getFormData, clearForm } from "./ui.js";
+
 const form = document.getElementById("expense-form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const expense = {
-    description: document.getElementById("addexpense").value.trim(),
-    amount: parseFloat(document.getElementById("amount").value),
-    currency: document.getElementById("currency").value,
-    category: document.getElementById("category").value,
-  };
-  console.log(expense);
+  const expense = getFormData();
+  if (!expense.description || isNaN(expense.amount))
+    {
+        alert("Please enter a description and a valid amount.");
+        return;
+    }
+  addExpense(expense);
+  clearForm();
+  console.log(expenses);
 });
