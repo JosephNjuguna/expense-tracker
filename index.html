@@ -14,6 +14,28 @@
 
 <body>
     <!-- header goes here -->
+    <div>
+        <div class="header-appname">
+            <h2>Expense Tracker</h2>
+            <p>log spending in any currency. Total are converted to your home currency</p>
+        </div>
+        <div class="header-total">
+            <div class="total">
+                <p>Total Spent, 4 expenses.</p>
+                <h3>$135.42</h3>
+            </div>
+            <div class="currencychange">
+                <p>Home Currency</p>
+                <select name="currency" id="currency">
+                    <option value="usd">usd</option>
+                    <option value="eur">eur</option>
+                    <option value="ksh">ksh</option>
+                    <option value="gbp">gbp</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
     <div class="main-section">
         <form action="" method="post" class="form" id="expense-form">
             <h3>Add Expense</h3>
@@ -45,7 +67,6 @@
                 <input type="submit" value="Add Expense" id="submit">
             </div>
         </form>
-        <!-- expense list comes here -->
 
         <div class="expensedisplay">
             <div class="filter">
@@ -59,7 +80,7 @@
                 <h3>Expenses</h3>
                 <p>categories total: $135.42</p>
             </div>
-            
+
             <div class="expenselist">
                 <div class="expense-card">
                     <div class="item">
@@ -111,8 +132,6 @@
             </div>
 
         </div>
-
-
     </div>
 </body>
 
