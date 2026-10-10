@@ -15,7 +15,7 @@ jobs:
         uses: github/update-project-action@main
         with:
           github_token: ${{ secrets.PROJECT_TOKEN }}
-          organization: JosephNjugunam
+          organization: JosephNjuguna
           project_number: 3
           content_id: ${{ github.event.issue.node_id }}
           field: Status
