@@ -46,4 +46,19 @@ function updatePage() {
 
 
 
+const homeCurrencySelect = document.getElementById("homeCurrency");
+homeCurrencySelect.addEventListener("change", async function () {
+  setHomeCurrency(homeCurrencySelect.value);
+  const rates = await ExchangeRates(homeCurrency);
+  for (const expense of expenses) {
+    const homeCurrencySelect = document.getElementById("homeCurrency");
+    if (expense.currency === homeCurrencySelect.value) {
+      expense.convertedAmnt = Number(expense.amount).toFixed(2)
+    } else {
+      expense.convertedAmnt = Number(expense.amount / rates[expense.currency]).toFixed(2)
+    }
+  }
+  updatePage();
+});
+
 updatePage();
