@@ -21,16 +21,16 @@
         </div>
         <div class="header-total">
             <div class="total">
-                <p>Total Spent, 4 expenses.</p>
-                <h3>$135.42</h3>
+                <p id="total-expenses"></p>
+                <h3 id="total-amnt"></h3>
             </div>
             <div class="currencychange">
                 <p>Select Home Currency</p>
-                <select name="currency" id="currency">
-                    <option value="usd">usd</option>
-                    <option value="eur">eur</option>
-                    <option value="ksh">ksh</option>
-                    <option value="gbp">gbp</option>
+                <select name="currency" id="homeCurrency">
+                    <option value="KES">KES</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
                 </select>
             </div>
         </div>
@@ -50,10 +50,10 @@
                     <div class="currency">
                         <p>Select currency used</p>
                         <select name="currency" id="currency">
-                            <option value="usd">usd</option>
-                            <option value="eur">eur</option>
-                            <option value="ksh">ksh</option>
-                            <option value="gbp">gbp</option>
+                            <option value="KES">KES</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
                         </select>
                     </div>
                 </div>
@@ -81,54 +81,7 @@
                 <p>categories total: $135.42</p>
             </div>
 
-            <div class="expenselist">
-                <div class="expense-card">
-                    <div class="item">
-                        <h3>lunch at the market</h3>
-                        <p>food</p>
-                    </div>
-                    <div class="money">
-                        <h3>$9.45</h3>
-                        <p>ksh 1,200.00</p>
-                    </div>
-                    <div class="delete">
-                        <span class="material-symbols-outlined">delete</span>
-                    </div>
-                </div>
-
-                <div class="expense-card">
-                    <div class="item">
-                        <h3>lunch at the market</h3>
-                        <p>food</p>
-                    </div>
-                    <div class="money">
-                        <h3>$9.45</h3>
-                        <p>ksh 1,200.00</p>
-                    </div>
-                    <div class="delete">
-                        <span class="material-symbols-outlined">delete</span>
-                    </div>
-                </div>
-
-                <div class="expense-card">
-                    <div class="item">
-                        <h3>lunch at the market</h3>
-                        <p>food</p>
-                    </div>
-                    <div class="money">
-                        <h3>$9.45</h3>
-                        <p>ksh 1,200.00</p>
-                    </div>
-                    <div class="delete">
-                        <span class="material-symbols-outlined">delete</span>
-                    </div>
-                </div>
-
-                <div class="no-expenses">
-                    <h4>There are no logged expenses</h4>
-                    <p>add expenses using form on the left</p>
-                </div>
-
+            <div class="expenselist" id="expenselist">
             </div>
 
         </div>
