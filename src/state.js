@@ -5,7 +5,7 @@ export let expenses = [
         description: "uber",
         amount: 23,
         currency: "EUR",
-        category: "transport",
+        category: "Transport",
         convertedAmnt:3000
     },
 
@@ -14,7 +14,7 @@ export let expenses = [
         description: "turkey palace",
         amount: 8500,
         currency: "KES",
-        category: "food",
+        category: "Food",
         convertedAmnt:70
     },
     {   
@@ -22,7 +22,7 @@ export let expenses = [
         description: "claude 20x",
         amount: 100,
         currency: "USD",
-        category: "entertainment",
+        category: "Entertainment",
         convertedAmnt:13000
     }
 ]

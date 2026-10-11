@@ -59,10 +59,10 @@
                 </div>
                 <p>Expense category</p>
                 <select name="category" id="category">
-                    <option value="transport">transport</option>
-                    <option value="food">food</option>
-                    <option value="shopping">shopping</option>
-                    <option value="entertainment">entertainment</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Food">Food</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Entertainment">Entertainment</option>
                 </select>
                 <input type="submit" value="Add Expense" id="submit">
             </div>
@@ -70,15 +70,15 @@
 
         <div class="expensedisplay">
             <div class="filter">
-                <p id="all">All</p>
-                <p id="transport">Transport</p>
-                <p id="food">Food</p>
-                <p id="shopping">Shopping</p>
-                <p id="entertainment">entertainment</p>
+                <p data-category="All">All</p>
+                <p data-category="Transport">Transport</p>
+                <p data-category="Food">Food</p>
+                <p data-category="Shopping">Shopping</p>
+                <p data-category="Entertainment">Entertainment</p>
             </div>
             <div class="header">
                 <h3>Expenses</h3>
-                <p>categories total: $135.42</p>
+                <p id="filteredAmount"></p>
             </div>
 
             <div class="expenselist" id="expenselist">
