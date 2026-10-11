@@ -37,3 +37,10 @@ export let homeCurrency = homeCurrencySelect.value;
 export function setHomeCurrency(currency) {
     homeCurrency = currency;
 }
+
+export function deleteExpense(id) {
+    const index = expenses.findIndex(expense => expense.id === id);
+    if (index !== -1){
+        expenses.splice(index, 1);
+    }
+}

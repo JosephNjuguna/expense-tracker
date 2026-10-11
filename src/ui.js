@@ -1,7 +1,5 @@
 // its for anything that touches the DOM
-
-import { ExchangeRates } from "./api.js";
-import { addExpense, expenses } from "./state.js";
+import { expenses } from "./state.js";
 
 export function getFormData() {
   // if (!rate) {
@@ -20,7 +18,7 @@ export function clearForm() {
   document.getElementById("expense-form").reset();
 }
 
-export function displayExpenses(expenses, homeCurrency, onDelete) {
+export function displayExpenses(expenses, homeCurrency) {
   const expensesContainer = document.getElementById("expenselist");
   expensesContainer.innerHTML = "";
   if (expenses.length === 0) {
@@ -32,12 +30,12 @@ export function displayExpenses(expenses, homeCurrency, onDelete) {
               <p>add expenses using form on the left</p>
              </div>
         `;
-    return;
-  } else {
-    expenses.forEach(expense => {
-      const card = document.createElement("div");
-      card.className = "expense-card";
-      card.innerHTML = `
+    expensesContainer.appendChild(card);
+  }
+  expenses.forEach(expense => {
+    const card = document.createElement("div");
+    card.className = "expense-card";
+    card.innerHTML = `
               <div class="item">
                 <h3>${expense.description}</h3>
                 <p>${expense.category}</p>
@@ -46,16 +44,10 @@ export function displayExpenses(expenses, homeCurrency, onDelete) {
                 <h3>${expense.amount},${expense.currency}</h3>
                 <p>${expense.convertedAmnt},${homeCurrency}</p>
               </div>
-              <div class="delete" id="no-expenses">
-                <span class="material-symbols-outlined">delete</span>
+              <div class="delete" data-id="${expense.id}" >
+                <span class="material-symbols-outlined" >delete</span>
               </div>
           `;
-      // const deleteButton = document.getElementById("delete-expense");
-      // deleteButton.addEventListener("click", function () {
-      //   onDelete(expense.id);
-      // });
-
-      expensesContainer.appendChild(card);
-    });
-  }
+    expensesContainer.appendChild(card);
+  });
 }
