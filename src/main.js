@@ -2,7 +2,7 @@
 // It’s the one file i link in the HTML, 
 // and it’s where the form’s submit listener goes.
 
-import { addExpense, expenses, homeCurrency, setHomeCurrency } from "./state.js";
+import { addExpense, expenses, homeCurrency, setHomeCurrency, deleteExpense } from "./state.js";
 import { getFormData, clearForm, displayExpenses } from "./ui.js";
 import { ExchangeRates } from "./api.js";
 
@@ -20,26 +20,15 @@ form.addEventListener("submit", async (e) => {
   if (expense.currency === homeCurrencySelect.value) {
     expense.convertedAmnt = Number(expense.amount).toFixed(2)
   } else {
-    expense.convertedAmnt = Number(expense.amount / rates[expense.currency]).toFixed(2)
+    expense.convertedAmnt = Number(expense.amount/rates[expense.currency]).toFixed(2)
   }
+  expense.id = expenses.length
   addExpense(expense);
   clearForm();
   updatePage();
 });
 
 function updatePage() {
-
-
-
-  // const filteredExpenses = expenses.filter(function (expense) {
-  //     return selectedCategory === "All" ||
-  //         expense.category === selectedCategory;
-  // });
-
-  // const filter = document.getElementById('category-filter');
-  // filter.addEventListener('change', () => {
-  //   console.log('Selected:', filter.value);
-  // });
 
   const filter = document.querySelector('.filter');
   filter.addEventListener('click', (e) => {
@@ -72,6 +61,16 @@ function updatePage() {
   });
 
 
+
+  const expensesContainer = document.getElementById("expenselist");
+  expensesContainer.addEventListener("click", (e) => {
+    const deleteBtn = e.target.closest(".delete");
+    if (!deleteBtn) return;
+    console.log(deleteBtn.dataset.id);
+
+    deleteExpense(Number(deleteBtn.dataset.id));
+    updatePage();
+  });
 
 
 
