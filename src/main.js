@@ -20,7 +20,7 @@ form.addEventListener("submit", async (e) => {
   if (expense.currency === homeCurrencySelect.value) {
     expense.convertedAmnt = Number(expense.amount).toFixed(2)
   } else {
-    expense.convertedAmnt = Number(expense.amount/rates[expense.currency]).toFixed(2)
+    expense.convertedAmnt = Number(expense.amount / rates[expense.currency]).toFixed(2)
   }
   addExpense(expense);
   clearForm();
@@ -28,14 +28,59 @@ form.addEventListener("submit", async (e) => {
 });
 
 function updatePage() {
+
+
+
+  // const filteredExpenses = expenses.filter(function (expense) {
+  //     return selectedCategory === "All" ||
+  //         expense.category === selectedCategory;
+  // });
+
+  // const filter = document.getElementById('category-filter');
+  // filter.addEventListener('change', () => {
+  //   console.log('Selected:', filter.value);
+  // });
+
+  const filter = document.querySelector('.filter');
+  filter.addEventListener('click', (e) => {
+    const p = e.target.closest('p');
+    if (!p) return;
+
+    const selectedCategory = p.dataset.category;
+
+    const filteredExpenses = expenses.filter(function (expense) {
+      return selectedCategory === "All" || expense.category === selectedCategory;
+    });
+
+    const filterTotal = filteredExpenses.reduce(function (sum, expense) {
+      return sum + (Number(expense.convertedAmnt) || 0);
+    }, 0);
+
+    const filteredAmount = document.getElementById("filteredAmount");
+    filteredAmount.textContent = `categories total: ${filterTotal} ${homeCurrency} `;
+
+    displayExpenses(filteredExpenses, homeCurrency, function (id) {
+      deleteExpense(id);
+      updatePage();
+    });
+  });
+
+
   displayExpenses(expenses, homeCurrency, function (id) {
     deleteExpense(id);
     updatePage();
   });
 
+
+
+
+
   const total = expenses.reduce(function (sum, expense) {
     return sum + (Number(expense.convertedAmnt) || 0);
   }, 0);
+
+  const filteredAmount = document.getElementById("filteredAmount");
+  filteredAmount.textContent = `categories total: ${total} ${homeCurrency} `;
 
   const totalAmount = document.getElementById("total-amnt");
   totalAmount.textContent = `${homeCurrency} ${total}`;
