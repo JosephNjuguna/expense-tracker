@@ -1,5 +1,5 @@
 # Project title:
-Joseph Njuguna Portfolio
+Expense Tracker
 
 ## Description:
 Multi-Currency Expense Tracker is a lightweight web app for anyone who travels, freelances internationally, or shops from foreign stores and struggles to keep track of spending across different currencies. 
@@ -7,6 +7,8 @@ Multi-Currency Expense Tracker is a lightweight web app for anyone who travels, 
 Log each expense in the currency you actually paid in, and the app instantly converts everything into a single base currency of your choice, so your total spending is always clear at a glance. 
 
 Conversions use live exchange rates fetched from a public REST API, keeping your numbers accurate without any manual lookups or calculations.
+
+ ![Expense Tracker overview](./images/Multi-Currency%20Expense%20Tracker%20-%20slide%201.png)
 
 ## Live Demo link
 https://josephnjuguna.github.io/expense-tracker/
