@@ -37,6 +37,22 @@
     </div>
 
     <div class="main-section">
+        <div class="expensedisplay">
+            <div class="filter">
+                <p data-category="All">All</p>
+                <p data-category="Transport">Transport</p>
+                <p data-category="Food">Food</p>
+                <p data-category="Shopping">Shopping</p>
+                <p data-category="Entertainment">Entertainment</p>
+            </div>
+            <div class="header">
+                <h3>Expenses</h3>
+                <p id="filteredAmount"></p>
+            </div>
+            <div class="expenselist" id="expenselist">
+            </div>
+        </div>
+        
         <form action="" method="post" class="form" id="expense-form">
             <h3>Add Expense</h3>
             <div class="input-section">
@@ -67,24 +83,6 @@
                 <input type="submit" value="Add Expense" id="submit">
             </div>
         </form>
-
-        <div class="expensedisplay">
-            <div class="filter">
-                <p data-category="All">All</p>
-                <p data-category="Transport">Transport</p>
-                <p data-category="Food">Food</p>
-                <p data-category="Shopping">Shopping</p>
-                <p data-category="Entertainment">Entertainment</p>
-            </div>
-            <div class="header">
-                <h3>Expenses</h3>
-                <p id="filteredAmount"></p>
-            </div>
-
-            <div class="expenselist" id="expenselist">
-            </div>
-
-        </div>
     </div>
 
     <script type="module" src="src/main.js"></script>

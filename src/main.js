@@ -54,7 +54,6 @@ function updatePage() {
     });
   });
 
-
   displayExpenses(expenses, homeCurrency, function (id) {
     deleteExpense(id);
     updatePage();

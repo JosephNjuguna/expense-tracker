@@ -8,7 +8,6 @@ export let expenses = [
         category: "Transport",
         convertedAmnt:3000
     },
-
     {
         id:1,
         description: "turkey palace",
